@@ -109,6 +109,8 @@ async function ProductPage({ searchParams: { url } }: Props) {
           {product?.currency} {product.price}
         </p>
 
+        
+
         <hr />
 
         <h3 className="font-bold text-xl pt-10 "> Specification </h3>
