@@ -1,10 +1,9 @@
 export interface WalmartProductResult {
-    result: ProductContent[];
+    results: ProductContent [];
     job: JobDetails;
-
 }
 
-export interface ProductContent {
+export interface ProductContent{
     content: Product;
     created_at: string;
     updated_at: string;
@@ -13,10 +12,10 @@ export interface ProductContent {
     job_id: string;
     status_code: number;
     parser_type: string;
+    
 }
 
-
-export interface Product {
+export interface Product{
     url: string;
     meta: Meta;
     price: number;
@@ -25,9 +24,9 @@ export interface Product {
     rating: Rating;
     seller: Seller;
     currency: string;
-    warrant: string;
-    _warning: string;
-    variation: Variation[];
+    warranty: string;
+    _warnings: string[];
+    variations: Variation [];
     breadcrumbs: string[];
     description: string;
     out_of_stock: boolean;
@@ -35,6 +34,8 @@ export interface Product {
     parse_status_code: number;
     price_strikethrough?: number;
 }
+
+
 
 export interface Meta {
     sku: string;
@@ -44,9 +45,7 @@ export interface Meta {
 export interface Rating {
     count: number;
     rating: number;
-
 }
-
 
 export interface Seller {
     id: string;
@@ -55,7 +54,6 @@ export interface Seller {
     catalog_id: string;
     official_name: string;
 }
-
 
 export interface Variation {
     state: string;
@@ -66,9 +64,7 @@ export interface Variation {
 export interface SelectedOption {
     key: string;
     value: string;
-
 }
-
 
 export interface Specification {
     key: string;
@@ -78,7 +74,7 @@ export interface Specification {
 export interface JobDetails {
     callback_url: string;
     client_id: number;
-    context: JobContext[];
+    context: JobContext [];
     created_at: string;
     domain: string;
     geo_location: null | string;
@@ -88,8 +84,8 @@ export interface JobDetails {
     pages: number;
     parse: boolean;
     parser_type: null | string;
-    parsing_instruction: null | string;
-    browser_instruction: null | string;
+    parsing_instructions: null | string;
+    browser_instructions: null | string;
     render: null | boolean;
     url: string;
     query: string;
@@ -105,19 +101,16 @@ export interface JobDetails {
     session_info: null | string;
     statuses: any[];
     client_notes: null | string;
-    _links: Link[];
+    links: Link [];
 }
-
 
 export interface JobContext {
     key: string;
     value: any;
-
 }
 
 export interface Link {
     rel: string;
     href: string;
     method: string;
-
 }

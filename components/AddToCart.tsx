@@ -4,7 +4,7 @@ import { useCartStore } from "@/store"
 
 import { Button } from "./ui/button"
 import RemoveFromCart from "./RemoveFromCart"
-import { ProductContent } from "@/typings/productTyping"
+import { Product, ProductContent } from "@/typings/productTyping"
 
 
 function AddToCart({product}: {product: ProductContent}) {

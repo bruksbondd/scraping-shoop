@@ -28,7 +28,7 @@ export const useCartStore = create<CartState>()(
         },
       }),
       {
-        name: 'shopping-cart-storage-by-Vaibhav-saroj',
+        name: 'shopping-cart-storage-by-Bruks-Bond',
       },
     ),
   ),
